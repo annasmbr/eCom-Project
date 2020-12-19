@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 class Details extends Component {
     render() {
-        const { title, links } = this.props;
+      const { className, title, links } = this.props;
         return (
-            <div className='details'>
+            <div className={`${className} details`}>
                 <div className='details__title'>{title}</div>
                 <div className='details__links'>
                     {
@@ -19,3 +19,6 @@ class Details extends Component {
 }
 
 export default Details; 
+
+// const { title, links } = this.props;
+//<div className='details'>
