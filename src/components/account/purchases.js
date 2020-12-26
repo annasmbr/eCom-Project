@@ -18,9 +18,9 @@ class Purchases extends Component {
                     this.props.purchases.map(purchase => {
                         //return <div>{purchase.title}</div>
                         return (
-                            <div key={purchase._id} className='purchases__purchase purchase'>
-                                <img className='purchase__img' src='http://via.placeholder.com/80x80'/>
-                            </div>
+                          <a onClick={() => this.props.setPurchaseDetail(purchase._id)} key={purchase._id} className='purchases__purchase purchase'>
+                            <img className='purchase__img' src='http://via.placeholder.com/80x80'/>
+                          </a>
                         )
                     })
                 }
@@ -39,3 +39,4 @@ Purchases = connect(mapStateToProps, actions)(Purchases);
 export default Purchases;
 
 //purchases go here
+// <div key={purchase._id} className='purchases__purchase purchase'></div>
