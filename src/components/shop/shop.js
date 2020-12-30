@@ -14,21 +14,34 @@ class Shop extends Component {
             }
         ]
         this.props.setHeaderLinks(headerLinks);
-        
+
         // fetch shop products action creator
         this.props.fetchShopCategories();
 
+        //this.props.fetchShopCategories(() => {
+          //  this.props.setNavbarLinks(this.props.categories);
+        //});
+
          // filter products with links
          this.props.fetchShopProducts();
-
+        }
         // fetch navbar links
             // set navbar links
             // filter products with links
+        
+    shouldComponentUpdate(nextProps) {
+        if(this.props != nextProps) {
+            this.props.setNavbarLinks(nextProps.categories, (_id) => this.props.filterProductsWithCategoryId(_id));
+        }
+        return true
+        
     }
+ 
     render() {
+
         return (
             <div className='shop'>
-                shop ....
+                {/*shop ....*/}
                 {/* shop search bar */}
                 {/* shop product */}
                 {/* shop cart button */}
@@ -38,7 +51,11 @@ class Shop extends Component {
 }
 
 function mapStateToProps(state) {
-    return { state } 
+    //return { state } 
+    const { categories } = state.shop;
+    return {
+        categories
+    } 
 }
 
 Shop = connect(mapStateToProps, actions)(Shop);
