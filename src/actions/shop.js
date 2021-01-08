@@ -65,6 +65,7 @@ export function fetchShopCategories() {
 export function fetchShopProducts() {
     return ({
         type: SET_SHOP_PRODUCTS,
+       
         payload: [
             {
                 _id: 0,
@@ -118,3 +119,14 @@ export function fetchShopProducts() {
         ]
     })
 } 
+
+ {/* payload: [
+            {
+              product: 1
+              quantity: 4
+            },
+            {
+                product: 0
+                quantity: 1
+            }
+        ] */}
