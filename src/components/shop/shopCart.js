@@ -17,8 +17,9 @@ function CartContent({className, products}) {
         let count = products.length;  
         //let productsJSX = products.map(product => <h1 key={product}>{product}</h1>); 
         //let productsJSX = products.map(product => <CartProduct key={product}/>);
-        let productsJSX = products.map(product => <CartProduct key={product._id}/>);
-    return (
+        //let productsJSX = products.map(product => <CartProduct key={product._id}/>);
+        let productsJSX = products.map(product => <CartProduct {...product} key={product._id}/>);
+        return (
         <div className={`${className} cart-content`}>
             <div className='cart-content__title'>
                 Cart ({count})
