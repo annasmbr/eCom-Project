@@ -1,4 +1,5 @@
 .shop-cart {
+    transition: all .3s ease;
     //height: 675px;
     //width: 520px;
     display: grid;
@@ -11,9 +12,9 @@
         grid-column: s/e;
         justify-self: end;
 
-        display: grid;
-        justify-items: center;
-        align-items: center;
+        //display: grid;
+       // justify-items: center;
+       // align-items: center;
     }
 
     &__content {
@@ -24,7 +25,7 @@
 
 .shop-cart {
     &__toggle {
-
+        z-index: 6;
     }
     &__content {
         height: 675px;
@@ -35,6 +36,8 @@
 }
 
 .cart-button {
+    transition: all .3s ease;
+
     background-color: #333;
     //box-shadow: -3px 20px 20px 0 rgba(0,0,0,0.2);
     color: white;
@@ -42,6 +45,10 @@
     border-radius: 25px 0 0 25px;
     height: 40px;
     width: 76px;
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
 }
 
 .cart-content {
@@ -134,3 +141,7 @@
     }
 
 }
+
+.cart-hidden {
+    transform: translateX(520px);
+} 
