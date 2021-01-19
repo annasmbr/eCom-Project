@@ -55,6 +55,10 @@ body {
 @import 'order/reviewForm';
 @import 'order/reviewProduct';
 
+// INFORMATION
+@import 'information/payment';
+@import 'information/shipping';
+
 //body {
  //   overflow-x: hidden;
    // font-weight: normal;
