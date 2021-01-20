@@ -25,9 +25,12 @@ class Shipping extends Component {
             //<div className='sign-in'>
                // <PageTitle className='sign-in__page-title' title='Shipping Address' />
                 // <ShippingForm onSubmit={this.onSubmit} className='sign-in__form' /> 
-                <div className='shipping-form'>
-                <PageTitle className='shipping-form__page-title' title='Shipping Address' />
-                <ShippingForm onSubmit={this.onSubmit} className='shipping-form__form' />
+                //<div className='shipping-form'>
+                //<PageTitle className='shipping-form__page-title' title='Shipping Address' />
+                //<ShippingForm onSubmit={this.onSubmit} className='shipping-form__form' />
+                <div className='shipping'>
+                    <PageTitle className='shipping__page-title' title='Shipping Address' />
+                    <ShippingForm onSubmit={this.onSubmit} className='shipping__form' />
                 </div>
         )
     }
